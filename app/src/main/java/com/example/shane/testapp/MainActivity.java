@@ -1,5 +1,6 @@
 package com.example.shane.testapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -25,11 +26,21 @@ public class MainActivity extends AppCompatActivity  {
     public void checkthisout(View v) {
         EditText editText = (EditText) findViewById(R.id.editText1);
         TextView textView = (TextView) findViewById(R.id.textView2);
-        textView.setText("!");
+        textView.setText("");
         textView.append(editText.getText());
+        editText.setText("");
 
 
     }
+
+    public void nextscreen(View View)   {
+        Intent intent = new Intent(this, Activity2.class);
+        TextView textView = (TextView) findViewById(R.id.textView2);
+        String message = textView.getText().toString();
+        intent.putExtra("Passed_String", message);
+        startActivity(intent);
+        }
+
 
 }
 
