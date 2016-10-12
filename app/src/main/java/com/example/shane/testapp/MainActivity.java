@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  {
     public void checkthisout(View v) {
         EditText editText = (EditText) findViewById(R.id.editText1);
         TextView textView = (TextView) findViewById(R.id.textView2);
-        textView.setText("");
+        textView.setText("!");
         textView.append(editText.getText());
 
 
